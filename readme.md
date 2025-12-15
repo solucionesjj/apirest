@@ -1,6 +1,6 @@
 # Desarrollar API REST
 
-##Objetivo General
+## Objetivo General
 * Desarrollar una API REST para facilitar el intercambio de información de forma segura
 
 ## Especificaciones
@@ -40,21 +40,20 @@
 * **Autenticación y autorización**
 	* Usar OAuth 2.1 + Bearer token (JWT or opaque) sin reinventar cabeceras
 	* TLS 1.3 cuando sea posble, HSTS, redireccionar peticiones http a https
-	* Imprementar Rate-limit por token o IP retornando cabeceras:
-X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset
+	* Imprementar Rate-limit por token o IP retornando cabeceras: X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset
 	* Impelemntar CORS creando una lista de acceso permitida de orígenes
 * **Observabilidad**
-	*  Logs estructurados con información detallada del error.
-	*  Logs de las peticiones: timestamp, method, route, status, duration_ms, user_id, request_id
+	* Logs estructurados con información detallada del error.
+	* Logs de las peticiones: timestamp, method, route, status, duration_ms, user_id, request_id
 * **Base de datos**
 	* La API tendrá persistencia de datos usando MySQL
 
-##Alcance inicial
-*  Que permita un CRUD (Create (Post), Read (Get), Update (Put), Delete (Delete)) para las entidades: Usuario y Producto
+## Alcance inicial
+* Que permita un CRUD (Create (Post), Read (Get), Update (Put), Delete (Delete)) para las entidades: Usuario y Producto
 
-##Base de datos
-###Entidades
-####Usuario
+## Base de datos
+### Entidades
+#### Usuario
 * Id
 * Usuario
 * Nombre
@@ -63,7 +62,7 @@ X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset
 * FechaCreacion
 * FechaActualizacion
  
-####Producto
+#### Producto
 * Id
 * Nombre
 * Descripcion
@@ -71,7 +70,8 @@ X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset
 * FechaCreacion
 * FechaActualizacion
 
-* Crear base de datos MySQL
+## Comandos
+* Script para crear base de datos MySQL
 	* Para crear la base de datos mysql con persistencia en docker usar la siguiente sentencia:
 		```Docker
 		docker run -d \
@@ -82,6 +82,10 @@ X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset
 		-p 3306:3306 \
 		mysql:8.0
 		```
-
-* Ejecución
-	* source .venv/bin/activate && uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload 
+* Entorno:
+	* ``python3 -m venv .venv``
+	* ``source .venv/bin/activate``
+* Requisitos:
+	* ``pip3 install -r requirements.txt``
+ * Ejecución:
+	* ``source .venv/bin/activate && uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload``
