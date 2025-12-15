@@ -1,4 +1,23 @@
-# Desarrollar API REST
+# API REST
+
+Arquitectura de aplicaciones Web
+API Rest
+Unidad 2 - Actividad de entrega 1
+
+Presentado por:
+John Jairo Martínez Nieto
+
+Profesor
+Wilson Eduardo Soto Forero 
+
+Institución Universitaria Politécnico Grancolombiano
+Escuela de tecnologías de la información y las comunicaciones
+Maestría en Arquitectura de Software
+2025
+
+
+Video: https://youtu.be/9tVkIGV9WRc
+Repositorio: https://github.com/solucionesjj/apirest
 
 ## Objetivo General
 * Desarrollar una API REST para facilitar el intercambio de información de forma segura
